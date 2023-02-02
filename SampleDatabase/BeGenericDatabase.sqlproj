@@ -74,6 +74,16 @@
     <Build Include="gba\Tables\Endpoint.sql" />
     <Build Include="Security\gba.sql" />
     <Build Include="dbo\Tables\ResetPassword.sql" />
+    <Build Include="dbo\Tables\Job.sql" />
+    <Build Include="dbo\Tables\EmployeeSalary.sql" />
+    <Build Include="dbo\Tables\EmployeeJobHistory.sql" />
+    <Build Include="dbo\Tables\EmployeeDocument.sql" />
+    <Build Include="dbo\Tables\EmployeeAbsenceDocument.sql" />
+    <Build Include="dbo\Tables\EmployeeAbsence.sql" />
+    <Build Include="dbo\Tables\Employee.sql" />
+    <Build Include="dbo\Tables\Document.sql" />
+    <Build Include="dbo\Tables\Department.sql" />
+    <Build Include="dbo\Tables\AbsenceCategory.sql" />
   </ItemGroup>
   <ItemGroup>
     <None Include="FillSampleData.sql" />
