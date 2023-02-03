@@ -2,7 +2,7 @@ version: '3.4'
 
 services:
   genericbackend:
-    image: ${DOCKER_REGISTRY-}begeneric
+    image: begeneric
     build:
       context: .
       dockerfile: BeGeneric/Dockerfile
@@ -15,7 +15,7 @@ services:
       - ${APPDATA}/Microsoft/UserSecrets:/root/.microsoft/usersecrets:ro
       - ${APPDATA}/ASP.NET/Https:/root/.aspnet/https:ro
   db:
-    image: ${DOCKER_REGISTRY-}begenericdb
+    image: begenericdb
     ports:
     - 1433:1433
     build:
