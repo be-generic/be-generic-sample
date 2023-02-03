@@ -1,0 +1,25 @@
+version: '3.4'
+
+services:
+  genericbackend:
+    image: begeneric
+    build:
+      context: .
+      dockerfile: BeGeneric/Dockerfile
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Development
+      - ASPNETCORE_URLS=http://+:80
+    ports:
+      - 8888:80
+    volumes:
+      - ${APPDATA}/Microsoft/UserSecrets:/root/.microsoft/usersecrets:ro
+      - ${APPDATA}/ASP.NET/Https:/root/.aspnet/https:ro
+  db:
+    image: begenericdb
+    ports:
+    - 1433:1433
+    build:
+      dockerfile: BeGeneric/sql/Dockerfile
+      
+            
+   
