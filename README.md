@@ -15,6 +15,12 @@ To install, first fork/clone repository and then follow these steps:
    - Copy contents of FillSampleData.sql file in **BeGenericDatabase** database project and paste and run it on the selected database
  - Enjoy the very easily made Be-Generic-based backend 😉
  
+ Docker-compose:
+ - Change uncomment connectionString line for docker config and comment the previous one in appsettings.json file
+ - Change the password in BeGeneric/sql/Dockerfile and connectionString in appsettings.json if you like
+ - run docker-compose up in directory where docker-compose.yml is located
+ - Enjoy 😉
+ 
 > **Warning**
 >
 > Build the solution **TWICE**. All the Models, DTO Models and Entity Framework context get created automatically, and Visual Studio will usually fail the first build. Usually pre-build scripts don't take long, but if they do and build always fails, check the connection string in the appsettings.json and appsettings.development.json
